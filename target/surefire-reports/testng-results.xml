@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="641" started-at="2016-10-29T12:40:03Z" finished-at="2016-10-29T12:40:04Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="641" started-at="2016-10-29T12:40:03Z" finished-at="2016-10-29T12:40:04Z">
+      <class name="com.calculatorgui.artifact.CalculatorTest">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:testAdd(com.calculatorgui.artifact.CalculatorTest)]" name="testAdd" duration-ms="78" started-at="2016-10-29T14:40:04Z" finished-at="2016-10-29T14:40:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdd -->
+        <test-method status="PASS" signature="testSubtract()[pri:0, instance:testSubtract(com.calculatorgui.artifact.CalculatorTest)]" name="testSubtract" duration-ms="15" started-at="2016-10-29T14:40:04Z" finished-at="2016-10-29T14:40:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubtract -->
+        <test-method status="PASS" signature="testDivide()[pri:0, instance:testDivide(com.calculatorgui.artifact.CalculatorTest)]" name="testDivide" duration-ms="63" started-at="2016-10-29T14:40:04Z" finished-at="2016-10-29T14:40:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivide -->
+        <test-method status="PASS" signature="testMultiply()[pri:0, instance:testMultiply(com.calculatorgui.artifact.CalculatorTest)]" name="testMultiply" duration-ms="78" started-at="2016-10-29T14:40:04Z" finished-at="2016-10-29T14:40:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultiply -->
+      </class> <!-- com.calculatorgui.artifact.CalculatorTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

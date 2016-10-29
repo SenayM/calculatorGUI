@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">com.calculatorgui.artifact</a> &gt; <a href="index.source.html" class="el_package">com.calculatorgui.artifact</a> &gt; <span class="el_source">CalculatorGUI.java</span></div><h1>CalculatorGUI.java</h1><pre class="source lang-java linenums">package com.calculatorgui.artifact;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class CalculatorGUI {
+
+	private JFrame frmMyCalculator;
+<span class="nc" id="L15">	Calculator calculate=new Calculator();</span>
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+<span class="nc" id="L20">		EventQueue.invokeLater(new Runnable() {</span>
+			public void run() {
+				try {
+<span class="nc" id="L23">					CalculatorGUI window = new CalculatorGUI();</span>
+<span class="nc" id="L24">					window.frmMyCalculator.setVisible(true);</span>
+<span class="nc" id="L25">				} catch (Exception e) {</span>
+<span class="nc" id="L26">					e.printStackTrace();</span>
+<span class="nc" id="L27">				}</span>
+<span class="nc" id="L28">			}</span>
+		});
+<span class="nc" id="L30">	}</span>
+
+	/**
+	 * Create the application.
+	 */
+<span class="nc" id="L35">	public CalculatorGUI() {</span>
+<span class="nc" id="L36">		initialize();</span>
+<span class="nc" id="L37">	}</span>
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+<span class="nc" id="L43">		frmMyCalculator = new JFrame();</span>
+<span class="nc" id="L44">		frmMyCalculator.setTitle(&quot;My Calculator&quot;);</span>
+<span class="nc" id="L45">		frmMyCalculator.setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L46">		frmMyCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L47">		frmMyCalculator.getContentPane().setLayout(null);</span>
+		
+<span class="nc" id="L49">		JLabel lblFristNumber = new JLabel(&quot;Frist Number&quot;);</span>
+<span class="nc" id="L50">		lblFristNumber.setBounds(46, 36, 69, 14);</span>
+<span class="nc" id="L51">		frmMyCalculator.getContentPane().add(lblFristNumber);</span>
+		
+<span class="nc" id="L53">		JLabel lblSecondNumber = new JLabel(&quot;Second Number&quot;);</span>
+<span class="nc" id="L54">		lblSecondNumber.setBounds(46, 79, 69, 14);</span>
+<span class="nc" id="L55">		frmMyCalculator.getContentPane().add(lblSecondNumber);</span>
+		
+<span class="nc" id="L57">		final JTextArea txtfirstno = new JTextArea();</span>
+<span class="nc" id="L58">		txtfirstno.setBounds(160, 31, 90, 22);</span>
+<span class="nc" id="L59">		frmMyCalculator.getContentPane().add(txtfirstno);</span>
+		
+<span class="nc" id="L61">		final JTextArea txtsecondno = new JTextArea();</span>
+<span class="nc" id="L62">		txtsecondno.setBounds(160, 74, 90, 22);</span>
+<span class="nc" id="L63">		frmMyCalculator.getContentPane().add(txtsecondno);</span>
+		
+<span class="nc" id="L65">		JLabel lblResult = new JLabel(&quot;Result&quot;);</span>
+<span class="nc" id="L66">		lblResult.setBounds(46, 131, 69, 14);</span>
+<span class="nc" id="L67">		frmMyCalculator.getContentPane().add(lblResult);</span>
+		
+<span class="nc" id="L69">		final JLabel lblActualResult = new JLabel(&quot;&quot;);</span>
+<span class="nc" id="L70">		lblActualResult.setBounds(160, 131, 90, 14);</span>
+<span class="nc" id="L71">		frmMyCalculator.getContentPane().add(lblActualResult);</span>
+		
+<span class="nc" id="L73">		JButton btnAdd = new JButton(&quot;+&quot;);</span>
+<span class="nc" id="L74">		btnAdd.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L76">				System.out.println(&quot;You clicked Addition&quot;);</span>
+<span class="nc" id="L77">				double result =calculate.add(Double.valueOf(txtfirstno.getText()), Double.valueOf(txtsecondno.getText()));</span>
+<span class="nc" id="L78">				lblActualResult.setText( String.valueOf(result));</span>
+<span class="nc" id="L79">			}</span>
+		});
+<span class="nc" id="L81">		btnAdd.setBounds(94, 188, 41, 23);</span>
+<span class="nc" id="L82">		frmMyCalculator.getContentPane().add(btnAdd);</span>
+		
+<span class="nc" id="L84">		JButton btnSubtract = new JButton(&quot;-&quot;);</span>
+<span class="nc" id="L85">		btnSubtract.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L87">				System.out.println(&quot;You clicked Subtraction&quot;);</span>
+<span class="nc" id="L88">				double result =calculate.subtract(Double.valueOf(txtfirstno.getText()), Double.valueOf(txtsecondno.getText()));</span>
+<span class="nc" id="L89">				lblActualResult.setText( String.valueOf(result));</span>
+<span class="nc" id="L90">			}</span>
+		});
+<span class="nc" id="L92">		btnSubtract.setBounds(142, 188, 41, 23);</span>
+<span class="nc" id="L93">		frmMyCalculator.getContentPane().add(btnSubtract);</span>
+		
+<span class="nc" id="L95">		JButton btnMultiply = new JButton(&quot;x&quot;);</span>
+<span class="nc" id="L96">		btnMultiply.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L98">				System.out.println(&quot;You clicked Multiplication&quot;);</span>
+<span class="nc" id="L99">				double result =calculate.multiply(Double.valueOf(txtfirstno.getText()), Double.valueOf(txtsecondno.getText()));</span>
+<span class="nc" id="L100">				lblActualResult.setText( String.valueOf(result));</span>
+<span class="nc" id="L101">			}</span>
+		});
+<span class="nc" id="L103">		btnMultiply.setBounds(193, 188, 41, 23);</span>
+<span class="nc" id="L104">		frmMyCalculator.getContentPane().add(btnMultiply);</span>
+		
+<span class="nc" id="L106">		JButton btnDivide = new JButton(&quot;/&quot;);</span>
+<span class="nc" id="L107">		btnDivide.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L109">				System.out.println(&quot;You clicked Division&quot;);</span>
+<span class="nc" id="L110">				double result =calculate.divide(Double.valueOf(txtfirstno.getText()), Double.valueOf(txtsecondno.getText()));</span>
+<span class="nc" id="L111">				lblActualResult.setText( String.valueOf(result));</span>
+<span class="nc" id="L112">			}</span>
+		});
+<span class="nc" id="L114">		btnDivide.setBounds(244, 188, 41, 23);</span>
+<span class="nc" id="L115">		frmMyCalculator.getContentPane().add(btnDivide);</span>
+<span class="nc" id="L116">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

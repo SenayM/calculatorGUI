@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+com.calculatorgui.artifact,com.calculatorgui.artifact,CalculatorGUI,245,0,0,0,46,0,3,0,3,0
+com.calculatorgui.artifact,com.calculatorgui.artifact,Main,32,0,0,0,7,0,2,0,2,0
+com.calculatorgui.artifact,com.calculatorgui.artifact,CalculatorGUI.new ActionListener() {...},39,0,0,0,5,0,2,0,2,0
+com.calculatorgui.artifact,com.calculatorgui.artifact,CalculatorGUI.new ActionListener() {...},39,0,0,0,5,0,2,0,2,0
+com.calculatorgui.artifact,com.calculatorgui.artifact,CalculatorGUI.new Runnable() {...},16,0,0,0,7,0,2,0,2,0
+com.calculatorgui.artifact,com.calculatorgui.artifact,CalculatorGUI.new ActionListener() {...},39,0,0,0,5,0,2,0,2,0
+com.calculatorgui.artifact,com.calculatorgui.artifact,Calculator,7,24,1,1,2,7,1,5,0,5
+com.calculatorgui.artifact,com.calculatorgui.artifact,CalculatorGUI.new ActionListener() {...},39,0,0,0,5,0,2,0,2,0
